@@ -2,5 +2,14 @@
 name = "stringreader"
 version = "0.1.0"
 authors = ["René Perschon <rperschon85@gmail.com>"]
+description = "Provides a wrapper for strings so that they can be consumed via the std::io::Read trait."
+documentation = "https://docs.rs/stringreader/"
+homepage = "https://github.com/Leopard2A5/rust-stringreader"
+readme = "README.md"
+keywords = ["util", "strings", "reader"]
+license = "MIT"
+
+[badges]
+travis-ci = { repository = "Leopard2A5/rust-stringreader", branch = "master" }
 
 [dependencies]
