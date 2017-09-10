@@ -1,5 +1,7 @@
 # Rust StringReader
 
+[![Build Status](https://travis-ci.org/Leopard2A5/rust-stringreader.svg?branch=master)](https://travis-ci.org/Leopard2A5/rust-stringreader)
+
 Provides a wrapper for strings so that they can be consumed via the std::io::Read trait. This is especially useful when writing tests.
 
 ## Example
