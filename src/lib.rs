@@ -1,3 +1,23 @@
+//! Provides a wrapper for strings so that they can be consumed
+//! via the std::io::Read trait. This is especially useful when
+//! writing tests.
+//!
+//! # Examples
+//!
+//! ```
+//! use std::io::{Read, BufRead, BufReader};
+//! use stringreader::StringReader;
+//!
+//! let mut streader = StringReader::new("Line 1\nLine 2");
+//! let mut bufreader = BufReader::new(streader);
+//!	let mut buffer = String::new();
+//!
+//! bufreader.read_line(&mut buffer).unwrap();
+//!	println!("{}", buffer);
+//! ```
+//!
+//! Prints "Line 1\n"
+
 use std::io::Read;
 use std::io::Result;
 use std::slice::Iter;
@@ -7,6 +27,7 @@ pub struct StringReader<'a> {
 }
 
 impl<'a> StringReader<'a> {
+	/// Wrap a string in a `StringReader`, which implements `std::io::Read`.
     pub fn new(data: &'a str) -> Self {
         Self {
             iter: data.as_bytes().iter(),
