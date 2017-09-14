@@ -1,6 +1,6 @@
 [package]
 name = "stringreader"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["René Perschon <rperschon85@gmail.com>"]
 description = "Provides a wrapper for strings so that they can be consumed via the std::io::Read trait."
 documentation = "https://docs.rs/stringreader/"
